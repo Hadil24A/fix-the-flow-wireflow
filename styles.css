@@ -1,0 +1,111 @@
+
+* {
+    box-sizing: border-box;
+    font-size: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* Color palette */
+:root {
+    --clr-contrast-100: #333;
+    --clr-contrast-0:#FFFFFF;
+    --clr-block: #ededed;
+    --clr-blockhover: #dedede;
+    --clr-primair-50: #F7A100;
+    --clr-primair-80: #DE9000;
+    --clr-secundair-50:#0071B3;
+}
+
+@media (prefers-color-scheme:dark) {
+body {
+    --clr-contrast-100: #fff;
+    --clr-contrast-0: #1F2123;
+    --clr-block: #333;
+    --clr-blockhover: #4a4a4a;
+    --clr-contrast-50: #999999;
+    --clr-secundair-50:#60C5F8;
+    --clr-secundair-15: #006199;
+}
+}
+
+body {
+    background-color: var(--clr-contrast-0);
+    color: var(--clr-contrast-100);
+    display: flex;
+    flex-direction: column;
+    font-family: "Proxima Nova", sans-serif;
+    margin: 25em;
+}
+
+.comment-section {
+    border: #DE9000 solid;
+    height: 15em;
+    margin: auto;
+    position: relative;
+    width: 21em;
+}
+
+.msg {
+    border-bottom: var(--clr-primair-50) solid 0.1em;
+    display: flex;
+    gap: 1em;
+    margin: 0.9em;
+    padding: 0.4em;
+    /* visibility: hidden; */
+    width: 9.5em;
+}
+
+.msg-show {
+    visibility: visible;
+}
+
+.newmsg {
+    bottom: 1em;
+    display: flex;
+    left: 1em;
+    position: absolute;
+}
+
+.place-comment {
+    background: var(--clr-blockhover);
+    border: none;
+    font-size: 16px;
+    height: 3em;
+    padding: 0.5em;
+    margin: 0.5em;
+    color: var(--clr-contrast-100);
+    cursor: pointer;
+}
+
+.place-comment:focus {
+    background: var(--clr-secundair-50);
+    color: var(--clr-contrast-0);
+}
+
+textarea {
+    background: var(--clr-block);
+    border: none;
+    border-bottom: var(--clr-primair-50) solid 0.12em;
+    color: var(--clr-contrast-100);
+    font-size: 16px;
+    height: 3em;
+    margin: 0.5em;
+    outline: none;
+    resize: none;
+    width: 12em;
+}
+
+textarea:focus {
+    border: solid 0.2em var(--clr-primair-50);
+}
+
+textarea:focus:has(.place-comment:focus) {
+    background: var(--clr-secundair-50);
+    border: none;
+    font-size: 16px;
+    padding: 0.5em;
+    margin: 0.5em;
+    color: var(--clr-contrast-0);
+    cursor: pointer;
+}
