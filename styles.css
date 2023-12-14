@@ -52,12 +52,17 @@ body {
     gap: 1em;
     margin: 0.9em;
     padding: 0.4em;
-    /* visibility: hidden; */
+    visibility: hidden;
     width: 9.5em;
 }
 
-.msg-show {
-    visibility: visible;
+.show-msg {
+    border-bottom: var(--clr-primair-50) solid 0.1em;
+    display: flex;
+    gap: 1em;
+    margin: 0.9em;
+    padding: 0.4em;
+    width: 9.5em;
 }
 
 .newmsg {
@@ -98,14 +103,4 @@ textarea {
 
 textarea:focus {
     border: solid 0.2em var(--clr-primair-50);
-}
-
-textarea:focus:has(.place-comment:focus) {
-    background: var(--clr-secundair-50);
-    border: none;
-    font-size: 16px;
-    padding: 0.5em;
-    margin: 0.5em;
-    color: var(--clr-contrast-0);
-    cursor: pointer;
 }
