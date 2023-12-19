@@ -11,8 +11,8 @@ button.addEventListener('click', function() {
 
 // Text-area krijgt een border en bericht verschijnt
 
-    input.classList.toggle('.inputfocus')
-    message.classList.add('.show-msg')
+    input.classList.toggle('inputfocus')
+    message.classList.add('show-msg')
     
 })
 
