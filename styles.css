@@ -55,7 +55,7 @@ body {
     visibility: hidden;
     width: 9.5em;
 }
-
+ 
 .show-msg {
     border-bottom: var(--clr-primair-50) solid 0.1em;
     display: flex;
@@ -101,6 +101,6 @@ textarea {
     width: 12em;
 }
 
-textarea:focus {
+.inputfocus {
     border: solid 0.2em var(--clr-primair-50);
 }
