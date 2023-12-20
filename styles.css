@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     font-size: 1em;
@@ -6,7 +5,7 @@
     margin: 0;
     padding: 0;
 }
-/* Color palette */
+
 :root {
     --clr-contrast-100: #333;
     --clr-contrast-0:#FFFFFF;
@@ -55,13 +54,14 @@ body {
     visibility: hidden;
     width: 9.5em;
 }
- 
+
 .show-msg {
     border-bottom: var(--clr-primair-50) solid 0.1em;
     display: flex;
     gap: 1em;
     margin: 0.9em;
     padding: 0.4em;
+    visibility: visible;
     width: 9.5em;
 }
 
@@ -70,22 +70,6 @@ body {
     display: flex;
     left: 1em;
     position: absolute;
-}
-
-.place-comment {
-    background: var(--clr-blockhover);
-    border: none;
-    font-size: 16px;
-    height: 3em;
-    padding: 0.5em;
-    margin: 0.5em;
-    color: var(--clr-contrast-100);
-    cursor: pointer;
-}
-
-.place-comment:focus {
-    background: var(--clr-secundair-50);
-    color: var(--clr-contrast-0);
 }
 
 textarea {
@@ -101,6 +85,22 @@ textarea {
     width: 12em;
 }
 
-.inputfocus {
-    border: solid 0.2em var(--clr-primair-50);
+.sndbtn {
+    background: var(--clr-blockhover);
+    border: none;
+    font-size: 16px;
+    height: 3em;
+    padding: 0.5em;
+    margin: 0.5em;
+    color: var(--clr-contrast-100);
+    cursor: pointer;
 }
+
+.sndbtn:focus {
+    background: var(--clr-secundair-50);
+    color: var(--clr-contrast-0);
+}
+
+.focus {
+    border: solid 0.2em var(--clr-primair-50);
+} 

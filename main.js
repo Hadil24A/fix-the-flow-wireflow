@@ -1,24 +1,27 @@
-// Elementen selecteren; button, opmerkingensectie, bericht
 
-let button = document.querySelector('.place-comment')
-let commentBox = document.querySelector('.comment-section')
+// Elementen selecteren; button, textarea, bericht en gehele operkingensectie
+
+let button = document.querySelector('.sndbtn')
+let commentInput = document.querySelector('textarea')
 let message = document.querySelector('.msg')
-let input = document.querySelector('.newmsg')
+let commentBox = document.querySelector('.comment-section')
 
-// Luisteren naar event; button 
+// Naar event luisteren (button wordt geklikt)
 
 button.addEventListener('click', function() {
 
-// Text-area krijgt een border en bericht verschijnt
+// Bericht verschijnt
 
-    input.classList.toggle('inputfocus')
     message.classList.add('show-msg')
-    
 })
+// Naar event luisteren (bericht wordt geklikt)
 
+message.addEventListener('click', function() {
 
+// bericht wordt verwijdert
 
-
+    message.remove('msg')
+})
 
 
 
